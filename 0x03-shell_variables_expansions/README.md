@@ -16,3 +16,4 @@
 100-rot13
 101-odd
 102-water_and_stir
+#!/bin/bash
