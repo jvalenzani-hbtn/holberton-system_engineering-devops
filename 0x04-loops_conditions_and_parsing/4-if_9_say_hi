@@ -3,7 +3,7 @@
 
 i=0
 while (( i < 11)) ; do
-	if [ "$i" != 8 ]
+	if [ "$i" != 9 ]
 	then
 		echo "Holberton School"
 	else
