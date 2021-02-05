@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-for i in {0..9}; 
+# displays Holberton School 10 times
+
+for _ in {0..9}; 
 do 
 	echo "Holberton School";
 done
