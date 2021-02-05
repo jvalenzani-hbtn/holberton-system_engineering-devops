@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# displays Holberton School 10 times, but for the 9th iteration, displays Holberton School and then Hi on a new line
+
+hour=1
+while (( hour < 12 )) ; do
+	minute=1
+	echo "Hour: $hour"
+	while (( minute < 60 )); do
+		echo "$minute"
+		minute=$((minute + 1))
+	done
+	hour=$((hour + 1))
+done 
+echo "Hour: $hour"
