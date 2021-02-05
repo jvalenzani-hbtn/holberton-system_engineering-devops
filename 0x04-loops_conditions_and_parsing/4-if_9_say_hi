@@ -2,7 +2,7 @@
 # displays Holberton School 10 times, but for the 9th iteration, displays Holberton School and then Hi on a new line
 
 i=0
-while (( i < 10)) ; do
+while (( i < 11)) ; do
 	if [ "$i" != 8 ]
 	then
 		echo "Holberton School"
