@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# displays Holberton School 10 times, but for the 9th iteration, displays Holberton School and then Hi on a new line
+# displays the time for 12 hours and 59 minutes
 
 hour=0
 while (( hour < 13 )) ; do
