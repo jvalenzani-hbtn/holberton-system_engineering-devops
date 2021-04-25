@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Apache is running in port 8080. Need to kill the process
+# No permissions/ownership on nginx.conf file. chmod 600 + chown nginx:nginx (or 644 and owner change)
+# nginx is configured to run on 80. Modify default site to start on 8080
+# start the service using user nginx to avoid master process to run as root.
+
+pkill -f apache2
+chmod 600 /etc/nginx/nginx.conf
+chown nginx.nginx /etc/nginx/nginx.conf
+sed -i 's/80 default_/8080 default_/' /etc/nginx/sites-available/default
+sudo -u nginx service nginx start
