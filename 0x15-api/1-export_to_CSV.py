@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-""" 
-Task 1: Export to CSV 
-"""
+""" Task 1: Export to CSV """
 
 import requests
 from sys import argv
 
 def getTasks(id):
     """ Retrieve tasks for user """
-    url = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={id}'
     r = requests.get(url)
     if(r.status_code == 200):
         return r.json()
@@ -16,7 +14,7 @@ def getTasks(id):
 
 def getUser(id):
     """ Retrieve User info """
-    url = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
+    url = f'https://jsonplaceholder.typicode.com/users/{id}'
     r = requests.get(url)
     if(r.status_code == 200):
         return r.json()
@@ -31,4 +29,4 @@ if __name__ == "__main__":
             task_list = getTasks(emp_id)
             if(len(task_list) > 0):
                 for task in task_list:
-                    data_file.write('"{}","{}","{}","{}"\n'.format(u["id"],u["username"],task["completed"],task["title"]))
+                    print(f'"{u["id"]}","{u["username"]}","{task["completed"]}","{task["title"]}"')
